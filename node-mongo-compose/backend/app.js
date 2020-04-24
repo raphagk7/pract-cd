@@ -15,7 +15,7 @@ server.use(bodyParser.json())
 server.use(cors())
 
 //ODM
-const Cliente = restful.model('Client', {
+const Client = restful.model('Client', {
   name: { type: String, required: true }
 })
 
