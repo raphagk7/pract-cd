@@ -21,6 +21,10 @@ const Cliente = restful.model('Client', {
 
 //Rest API
 Client.methods(['get', 'post', 'put', 'delete'])
+Client.updateOptions({new:true, runValidators: true})
+
+//Routes
+Client.register(server, '/clients')
 
 //Start Server
 server.listen(3000)
